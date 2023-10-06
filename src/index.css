@@ -1,0 +1,272 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+div {
+	display: flex;
+	flex-wrap: wrap;
+	/* 1 = flex-grow – Habilidade de um flex item crescer. */
+	/* 1 = flex-shrink - Capacidade de redução do item.    */
+	/* 100vw = flex-basis – Tamanho inicial do item.       */
+	flex: 1 1 100vw;
+	margin: 0; 	/* Margem de todos os lados. */
+}
+
+/* Formatação comum entre os elementos. */
+header, nav, main, aside, footer {
+	display: flex;
+	margin: 0;	/* Margem externa de todos os lados. */
+  font-family: Century Gothic;
+  background: #1A3D81;
+}
+
+header {
+	height: 100px;
+	flex: 1 1 100vw;
+}
+
+header #logo {
+	display: flex;
+	flex: 0 1 120px;
+	justify-content: center;
+	align-items: center;
+}
+
+#openMenu, #closeMenu {
+	border: none;
+	background: none;
+	font-size: 30px;
+	font-weight: bold;
+	/* Margem ao redor do elemento              */
+	/* (superior, direito, inferior e esquerdo) */
+	padding: 0px 5px 0px 5px;
+	/* Muda o cursor do mouse para ponteiro.*/
+	cursor: pointer;
+	display: none;
+}
+
+nav {
+  background: #1A3D81;
+	justify-content: flex-end;
+	align-items: center;
+	flex: 1 1 200px;
+  font-weight: bold;
+  color: azure;
+}
+
+nav a {
+	margin: 0 3%;
+	font-size: 15pt;
+}
+
+main {
+	/* Realizar a subtração de 100% da altura vertical menos a soma    */
+	/* da altura dos elementos ( 400px ) com as suas margens ( 36px ). */
+	height: calc(100vh - 180px);
+	flex: 20 1 500px;
+  background: linear-gradient(to bottom, #000000, #000000, #17225ace);
+}
+#liberdade {
+  width: 100%; /* A imagem ocupa 100% da largura da div pai */
+  height: 100%;
+  opacity: 50%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+aside {
+	flex: 1 1 200px;
+  background: #14213d;
+}
+
+aside .iconFuncoes {
+  align-items: center;
+  margin: 0;
+  padding: 20%;
+  padding-top: 0;
+}
+
+aside img{
+  width: 70px;
+  padding: 0;
+}
+
+aside img:hover {
+  width: 75px;
+  padding: 0;
+}
+
+aside .Pontos {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #e0fbfc;
+  border-radius: 20px;
+  height: 23%;
+  margin: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+aside .Publico {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #e0fbfc;
+  border-radius: 20px;
+  height: 23%;
+  margin: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+aside .P-Historico {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #e0fbfc;
+  border-radius: 20px;
+  height: 23%;
+  margin: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+aside .Alimentacao {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #e0fbfc;
+  border-radius: 20px;
+  height: 23%;
+  margin: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+footer {
+	height: 80px;
+	flex: 1 1 100vw;
+  background: #1A3D81;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+@media only screen and (max-width: 717px) {
+	#openMenu, #closeMenu {
+		display: block;
+	}
+
+	#openMenu {
+		margin-left: auto;
+	}
+
+	#closeMenu {
+		position: fixed;
+		right: 15px;
+		top: 15px;
+	}
+
+	header {
+		order: 0;
+	}
+
+	nav {
+		/* Ordem da visualização dos elementos. */
+		order: 1;
+		position: fixed;
+    z-index: 9;
+		width: 50vw;
+		height: 100vh;
+		background: #8d99aee5;
+		/* Dispõe os itens em coluna. */
+		flex-direction: column;
+		align-items: center;
+		/* Alinha os itens na vertical. */
+		justify-content: center;
+		margin: 0;
+		/* Oculta o elemento. */
+		display: none;
+		opacity: 0;
+		transition: 0.3s;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+	}
+
+	nav a {
+    height: 50px;
+    color: #000000;
+    font-size: 5vh;
+    margin: 50px;
+	}
+
+	main {
+		order: 2;
+		/* Realizar a subtração de 100% da altura vertical menos a soma    */
+		/* da altura dos elementos ( 300px ) com as suas margens ( 30px ). */
+		height: calc(100vh - 240px);
+	}
+
+	aside {
+		/* Ordem da visualização dos elementos. */
+		order: 4;
+		height: 110px;
+    width: 100%;
+    padding-top: 7%;
+    padding-right: 70%;
+	}
+
+  aside img {
+    width: 50px;
+  }
+
+  aside .iconFuncoes {
+    display: flex; /* Tornar o elemento um contêiner flex */
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    margin-top: 0;
+  }
+
+  aside .Pontos {
+    background: #e0fbfc;
+    border-radius: 20px;
+    height: 50%;
+    padding: 35px;
+    cursor: pointer;
+  }
+  aside .Publico {
+    background: #e0fbfc;
+    border-radius: 20px;
+    height: 50%;
+    padding: 35px;
+    cursor: pointer;
+  }
+  aside .P-Historico {
+    background: #e0fbfc;
+    border-radius: 20px;
+    height: 50%;
+    padding: 35px;
+    cursor: pointer;
+  }
+  aside .Alimentacao {
+    background: #e0fbfc;
+    border-radius: 20px;
+    height: 50%;
+    padding: 35px;
+    cursor: pointer;
+  }
+  aside img:hover {
+    width: 55px;
+    padding: 0;
+  }
+  
+	footer {
+    background: #000000;
+    height: 30px;
+		order: 5;
+	}
+}
