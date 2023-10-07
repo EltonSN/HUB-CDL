@@ -6,7 +6,7 @@ import Logo from "../img/cdl.png"
 import Historico from "../img/Historico.png"
 import Ponto from "../img/ponto.png"
 import Alimentacao from "../img/Alimentacao.png"
-
+import Una from "../img/una.png"
 
 function Home() {
     useEffect(() => {
@@ -71,8 +71,16 @@ function Home() {
                 </div>
             </div>
         </aside>
-        <main><img src={imgMain} alt="Liberdade" id='liberdade' /></main>
+            <main>
+                <img src={imgMain} alt="Liberdade" id='liberdade' />
+                <div className="MenuCentral">
+                    exibe as informações
+                </div>
+            </main>
         <footer>
+            <div className="Una">
+                <img src={Una} />
+            </div>
         </footer>
     </div>
     )

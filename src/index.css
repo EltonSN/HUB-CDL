@@ -22,11 +22,14 @@ header, nav, main, aside, footer {
 	margin: 0;	/* Margem externa de todos os lados. */
   font-family: Century Gothic;
   background: #1A3D81;
+  
 }
 
 header {
+  z-index: 8;
 	height: 100px;
 	flex: 1 1 100vw;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.449);
 }
 
 header #logo {
@@ -49,6 +52,15 @@ header #logo {
 	display: none;
 }
 
+.MenuCentral {
+  position: absolute;
+  background: #293241c6;
+  width: 70%;
+  height: 70%;
+  border-radius: 40px;
+  color:rgba(255, 255, 255, 0.449);
+}
+
 nav {
   background: #1A3D81;
 	justify-content: flex-end;
@@ -63,7 +75,14 @@ nav a {
 	font-size: 15pt;
 }
 
+nav img {
+  width: 0;
+}
+
 main {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 	/* Realizar a subtração de 100% da altura vertical menos a soma    */
 	/* da altura dos elementos ( 400px ) com as suas margens ( 36px ). */
 	height: calc(100vh - 180px);
@@ -89,7 +108,7 @@ aside .iconFuncoes {
   padding-top: 0;
 }
 
-aside img{
+aside img {
   width: 70px;
   padding: 0;
 }
@@ -148,6 +167,14 @@ footer {
 	height: 80px;
 	flex: 1 1 100vw;
   background: #1A3D81;
+} 
+
+.Una img{
+  position: relative;
+  top: 30%;
+  left: 2%;
+  width: 8%;
+  height: 40%;
 }
 
 a {
@@ -197,11 +224,21 @@ a {
 	}
 
 	nav a {
+    text-align: center;
     height: 50px;
+    width: 200px;
     color: #000000;
     font-size: 5vh;
     margin: 50px;
+    font-size: 3vh;
 	}
+
+  nav img {
+    padding-top: 4px;
+    float: left;
+    width: 30px;
+    margin: 0;
+  }
 
 	main {
 		order: 2;
@@ -209,6 +246,14 @@ a {
 		/* da altura dos elementos ( 300px ) com as suas margens ( 30px ). */
 		height: calc(100vh - 240px);
 	}
+  .MenuCentral {
+    position: absolute;
+    background: #293241c6;
+    width: 90%;
+    height: 60%;
+    border-radius: 40px;
+    color:rgba(255, 255, 255, 0.449);
+  }
 
 	aside {
 		/* Ordem da visualização dos elementos. */
