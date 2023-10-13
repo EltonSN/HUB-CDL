@@ -54,11 +54,13 @@ header #logo {
 
 .MenuCentral {
   position: absolute;
-  background: #293241c6;
   width: 70%;
   height: 70%;
   border-radius: 40px;
-  color:rgba(255, 255, 255, 0.449);
+  background-size: cover; 
+  backdrop-filter: blur(10px); /* Ajuste o valor de desfoque conforme necessário */
+  background-color: rgba(179, 199, 221, 0.5); /* Cor de fundo semitransparente */
+  box-shadow: 0px 0px 60px rgba(2, 2, 2, 0.705);
 }
 
 nav {
@@ -69,10 +71,55 @@ nav {
   font-weight: bold;
   color: azure;
 }
+.Menu {
+  display: flex;
+	flex: 1 1 50%;
+}
+/* Estilo da barra de pesquisa */
+.Pesquisa {
+  display: flex;
+	flex: 1 1 120px;
+}
+.search-bar {
+  display: flex;
+}
+
+.search-input {
+  width: 200px; /* Largura da barra de pesquisa */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search-button img {
+  width: 30px; /* Largura da imagem */
+  height: 30px; /* Altura da imagem */
+  border: none;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  width: 35px;
+}
+
+.search-button {
+  margin-left: 10px;
+  background: transparent;
+  border: none;
+}
 
 nav a {
 	margin: 0 3%;
 	font-size: 15pt;
+}
+
+nav a:hover {
+  color: yellow;
+}
+
+nav a:focus {
+  font-size: 15.5pt;
 }
 
 nav img {
@@ -87,18 +134,17 @@ main {
 	/* da altura dos elementos ( 400px ) com as suas margens ( 36px ). */
 	height: calc(100vh - 180px);
 	flex: 20 1 500px;
-  background: linear-gradient(to bottom, #000000, #000000, #17225ace);
 }
+
 #liberdade {
   width: 100%; /* A imagem ocupa 100% da largura da div pai */
   height: 100%;
-  opacity: 50%;
   object-fit: cover;
   object-position: center bottom;
 }
 aside {
 	flex: 1 1 200px;
-  background: #14213d;
+  background: #0b1222;
 }
 
 aside .iconFuncoes {
@@ -163,20 +209,39 @@ aside .Alimentacao {
   cursor: pointer;
 }
 
+aside p {
+  font-size: 10pt;
+  font-weight: bold;
+}
+
 footer {
 	height: 80px;
 	flex: 1 1 100vw;
   background: #1A3D81;
 } 
-
-.Una img{
+.Una {
   position: relative;
-  top: 30%;
-  left: 2%;
-  width: 8%;
-  height: 40%;
+	justify-content: center;
+	align-items: center;
+  flex: 1 1 200px;
 }
-
+.Una img {
+  width: 100px;
+}
+.Redes {
+  justify-content: center;
+  align-items: center; 
+  margin: 0;
+}
+.Redes a {
+  margin: 15px;
+}
+.Redes img {
+  margin: 5px;
+}
+.Redes img:hover {
+  padding-bottom: 10px;
+}
 a {
 	text-decoration: none;
 	color: inherit;
