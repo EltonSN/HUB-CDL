@@ -82,7 +82,9 @@ function Home() {
         <main>
             <img src={imgMain} alt="Liberdade" id='liberdade' />
             <div className="MenuCentral">
-                
+                <div className="Informacoes">
+                    <h3>Restaurante Italiano Maurizio Gallo</h3>
+                </div>
             </div>
         </main>
         <footer>

@@ -249,17 +249,23 @@ a {
 
 @media only screen and (max-width: 717px) {
 	#openMenu, #closeMenu {
-		display: block;
+		display: flex;
+    align-items: center;
+    width: 50px;
 	}
 
 	#openMenu {
 		margin-left: auto;
 	}
+  #openMenu:hover {
+    color: #e0fbfc;
+  }
 
 	#closeMenu {
-		position: fixed;
-		right: 15px;
-		top: 15px;
+    display: flex;
+		position: absolute;
+		right: 0;
+		top: 30px;
 	}
 
 	header {
@@ -271,9 +277,12 @@ a {
 		order: 1;
 		position: fixed;
     z-index: 9;
-		width: 50vw;
+		width: 70vw;
 		height: 100vh;
-		background: #8d99aee5;
+    background-size: cover; 
+    backdrop-filter: blur(10px); /* Ajuste o valor de desfoque conforme necessário */
+    background-color: rgba(179, 199, 221, 0.842); /* Cor de fundo semitransparente */
+    box-shadow: 0px 0px 60px rgba(2, 2, 2, 0.74);
 		/* Dispõe os itens em coluna. */
 		flex-direction: column;
 		align-items: center;
@@ -282,27 +291,43 @@ a {
 		margin: 0;
 		/* Oculta o elemento. */
 		display: none;
-		opacity: 0;
-		transition: 0.3s;
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
+    transition: 0.5s;
 	}
 
 	nav a {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
     width: 200px;
     color: #000000;
     font-size: 5vh;
-    margin: 50px;
     font-size: 3vh;
 	}
+
+  nav a:hover {
+    color: #0eb124;
+  }
+
+  .Menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    padding: 50px;
+  }
+
+  /* Retirei a barra de pesquisa pois nao consegui mover ele para o Header */
+  .Pesquisa {
+    display: none;
+  }
 
   nav img {
     padding-top: 4px;
     float: left;
     width: 30px;
-    margin: 0;
+    margin: 10px;
   }
 
 	main {
@@ -313,15 +338,18 @@ a {
 	}
   .MenuCentral {
     position: absolute;
-    background: #293241c6;
     width: 90%;
     height: 60%;
     border-radius: 40px;
-    color:rgba(255, 255, 255, 0.449);
+    background-size: cover; 
+    backdrop-filter: blur(10px); /* Ajuste o valor de desfoque conforme necessário */
+    background-color: rgba(179, 199, 221, 0.5); /* Cor de fundo semitransparente */
+    box-shadow: 0px 0px 60px rgba(2, 2, 2, 0.705);
   }
 
 	aside {
 		/* Ordem da visualização dos elementos. */
+    overflow-x: auto;
 		order: 4;
 		height: 110px;
     width: 100%;
@@ -331,44 +359,31 @@ a {
 
   aside img {
     width: 50px;
+    margin-left: -25px;
+  }
+
+  aside p {
+    margin: 5px;
   }
 
   aside .iconFuncoes {
     display: flex; /* Tornar o elemento um contêiner flex */
     flex-direction: column;
-    align-items: center; 
     justify-content: center; 
     margin-top: 0;
   }
 
-  aside .Pontos {
+  aside .Pontos, aside .Publico, aside .P-Historico, aside .Alimentacao {
     background: #e0fbfc;
     border-radius: 20px;
-    height: 50%;
-    padding: 35px;
+    padding: 36px 30px 35px 35px;
     cursor: pointer;
   }
-  aside .Publico {
-    background: #e0fbfc;
-    border-radius: 20px;
-    height: 50%;
-    padding: 35px;
-    cursor: pointer;
+
+  .Alimentacao img {
+    padding: -10px;
   }
-  aside .P-Historico {
-    background: #e0fbfc;
-    border-radius: 20px;
-    height: 50%;
-    padding: 35px;
-    cursor: pointer;
-  }
-  aside .Alimentacao {
-    background: #e0fbfc;
-    border-radius: 20px;
-    height: 50%;
-    padding: 35px;
-    cursor: pointer;
-  }
+
   aside img:hover {
     width: 55px;
     padding: 0;
@@ -377,6 +392,45 @@ a {
 	footer {
     background: #000000;
     height: 30px;
-		order: 5;
+		order: 1;
 	}
+  .Una {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 120px;
+  }
+  .Una img {
+    width: 70px;
+  }
+  .Redes {
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+  }
+  .Redes a {
+    margin-top: 3px;
+  }
+  .Redes img {
+    width: 18px;
+  }
+  .Redes img:hover {
+    padding-bottom: 0px;
+  }
+  ::-webkit-scrollbar {
+    height: 10px; /* Largura da barra de rolagem */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: none; /* fundo da faixa */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(2, 170, 78, 0.884); /* Cor do polegar */
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(41, 204, 115);/* Cor do polegar ao passar o mouse */
+  }
 }
