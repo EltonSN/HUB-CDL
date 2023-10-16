@@ -1,16 +1,18 @@
-//import "../assets/js/script";
+import AlimentacaoPage from "./Alimentacao";
 import React, { useEffect } from "react";
 import Menu from './Menu';
 import Publico from "../img/publico.png"
 import Logo from "../img/cdl.png"
 import Historico from "../img/Historico.png"
 import Ponto from "../img/ponto.png"
-import Alimentacao from "../img/Alimentacao.png"
+import AlimentacaoImg from "../img/Alimentacao.png"
 import Una from "../img/una.png"
 import Site from "../img/site.png"
 import Insta from "../img/instagram.png"
 import Linkedin from "../img/linkedin.png"
 import Youtube from "../img/youtube.png"
+import Lupa from "../img/lupa.png"
+
 
 function Home() {
     useEffect(() => {
@@ -48,18 +50,27 @@ function Home() {
       const imgMain = 'https://1.bp.blogspot.com/-WZJK08-0koM/XswuNYveYjI/AAAAAAAAB3w/Vje5NDmfN10hn4lo7dx1Jn72RYmu3523ACLcBGAsYHQ/s1600/WhatsApp%2BImage%2B2020-05-23%2Bat%2B10.23.12_Easy-Resize.com.jpg';
     return (
     <div>
+        <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </head>
         <header>
+            
             <img src={Logo} id="logo" alt="Logo" />
+            <div className="Pesquisa2">
+                <input type="text" class="search-input" placeholder="Pesquisar..." />
+                <button class="search-button" type="submit"><img src={Lupa} alt="Pesquisar" /></button>
+            </div>
             <button id="openMenu">&#9776;</button>
             <nav id="menu">
 
                 <button id="closeMenu">X</button>
                 <Menu />
+               
             </nav>
-            
         </header>
 
         <aside>
+            
             <div className='iconFuncoes'>
                 <div className='Pontos'>
                     <img src={Ponto} title='Pontos de Ônibus'/>
@@ -74,7 +85,7 @@ function Home() {
                     <p>Histórico</p>
                 </div>
                 <div className='Alimentacao'>
-                    <img src={Alimentacao} title='Alimentação'/>
+                    <img src={AlimentacaoImg} title='Alimentação'/>
                     <p>Alimentação</p>
                 </div>
             </div>
@@ -83,7 +94,7 @@ function Home() {
             <img src={imgMain} alt="Liberdade" id='liberdade' />
             <div className="MenuCentral">
                 <div className="Informacoes">
-                    <h3>Restaurante Italiano Maurizio Gallo</h3>
+                    <AlimentacaoPage />
                 </div>
             </div>
         </main>

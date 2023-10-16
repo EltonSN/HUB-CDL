@@ -75,6 +75,10 @@ nav {
   display: flex;
 	flex: 1 1 50%;
 }
+
+.Pesquisa2 {
+  display: none;
+}
 /* Estilo da barra de pesquisa */
 .Pesquisa {
   display: flex;
@@ -124,6 +128,44 @@ nav a:focus {
 
 nav img {
   width: 0;
+}
+
+.Informacoes {
+  overflow-y: auto;
+  display: flex;
+  margin-top: 25px;
+  margin-left: 10px;
+  align-items: flex-start;
+  flex: 1 1 50px;
+  max-height: 88%;
+}
+
+.Estabelecimento {
+  width: 100vh;
+  font-size: 15pt;
+  font-weight: bold;
+  text-align: start;
+}
+
+.Avaliacao {
+  width: 10vh;
+  font-size: 13pt;
+  margin-left: 40px;
+  text-align: flex-start;
+  justify-content: center;
+}
+.Avaliacao img {
+  width: 25px;
+}
+
+.Distancia {
+  width: 20vh;
+  font-size: 12pt;
+  align-items: flex-start;
+  justify-content: center;
+}
+.Distancia img {
+  width: 20px;
 }
 
 main {
@@ -247,6 +289,24 @@ a {
 	color: inherit;
 }
 
+::-webkit-scrollbar {
+  height: 10px; /* Largura da barra de rolagem */
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: none; /* fundo da faixa */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(2, 170, 78, 0.884); /* Cor do polegar */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(41, 204, 115);/* Cor do polegar ao passar o mouse */
+}
+
 @media only screen and (max-width: 717px) {
 	#openMenu, #closeMenu {
 		display: flex;
@@ -278,7 +338,7 @@ a {
 		position: fixed;
     z-index: 9;
 		width: 70vw;
-		height: 100vh;
+		height: 80vh;
     background-size: cover; 
     backdrop-filter: blur(10px); /* Ajuste o valor de desfoque conforme necessário */
     background-color: rgba(179, 199, 221, 0.842); /* Cor de fundo semitransparente */
@@ -293,10 +353,9 @@ a {
 		display: none;
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
-    transition: 0.5s;
+    transition: 0.3s;
 	}
-
-	nav a {
+  nav a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -314,13 +373,8 @@ a {
   .Menu {
     display: flex;
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 60px;
     padding: 50px;
-  }
-
-  /* Retirei a barra de pesquisa pois nao consegui mover ele para o Header */
-  .Pesquisa {
-    display: none;
   }
 
   nav img {
@@ -329,6 +383,49 @@ a {
     width: 30px;
     margin: 10px;
   }
+  
+/* Retirei a barra de pesquisa pois nao consegui mover ele para o Header */
+.Pesquisa {
+display: none;
+}
+ /* Estilo da barra de pesquisa mobile */
+.Pesquisa2 {
+  display: flex;
+	flex: 1 1 100px;
+
+}
+.search-bar {
+  display: flex;
+}
+
+.search-input {
+  width: 120px; /* Largura da barra de pesquisa */
+  height: 30px;
+  margin-top: 34px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  margin-left: 30px;
+}
+
+.search-button img {
+  width: 30px; /* Largura da imagem */
+  height: 30px; /* Altura da imagem */
+  border: none;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  width: 35px;
+}
+
+.search-button {
+  margin-left: 10px;
+  background: transparent;
+  border: none;
+}
+
 
 	main {
 		order: 2;
@@ -345,6 +442,44 @@ a {
     backdrop-filter: blur(10px); /* Ajuste o valor de desfoque conforme necessário */
     background-color: rgba(179, 199, 221, 0.5); /* Cor de fundo semitransparente */
     box-shadow: 0px 0px 60px rgba(2, 2, 2, 0.705);
+  }
+
+  .Informacoes {
+    overflow-y: auto;
+    display: flex;
+    margin-top: 25px;
+    margin-left: 10px;
+    align-items: flex-start;
+    flex: 1 1 50px;
+    max-height: 88%;
+  }
+
+  .Estabelecimento {
+    width: 100vh;
+    font-size: 15pt;
+    font-weight: bold;
+    text-align: start;
+  }
+
+  .Avaliacao {
+    width: 10vh;
+    font-size: 13pt;
+    margin-left: 40px;
+    text-align: flex-start;
+    justify-content: center;
+  }
+  .Avaliacao img {
+    width: 20px;
+  }
+
+  .Distancia {
+    width: 20vh;
+    font-size: 12pt;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .Distancia img {
+    width: 20px;
   }
 
 	aside {
@@ -419,6 +554,7 @@ a {
   }
   ::-webkit-scrollbar {
     height: 10px; /* Largura da barra de rolagem */
+    width: 8px;
   }
   
   ::-webkit-scrollbar-track {
