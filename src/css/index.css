@@ -485,8 +485,8 @@ display: none;
 	aside {
 		/* Ordem da visualização dos elementos. */
     overflow-x: auto;
-		order: 4;
-		height: 110px;
+		order: 1;
+		height: 104px;
     width: 100%;
     padding-top: 7%;
     padding-right: 70%;
@@ -526,8 +526,8 @@ display: none;
   
 	footer {
     background: #000000;
-    height: 30px;
-		order: 1;
+    height: 36px;
+		order: 4;
 	}
   .Una {
     position: relative;
@@ -553,7 +553,7 @@ display: none;
     padding-bottom: 0px;
   }
   ::-webkit-scrollbar {
-    height: 10px; /* Largura da barra de rolagem */
+    height: 4px; /* Largura da barra de rolagem */
     width: 8px;
   }
   

@@ -1,3 +1,4 @@
+import {Routes, Route } from "react-router-dom";
 import AlimentacaoPage from "./Alimentacao";
 import React, { useEffect } from "react";
 import Menu from './Menu';
@@ -73,19 +74,19 @@ function Home() {
             
             <div className='iconFuncoes'>
                 <div className='Pontos'>
-                    <img src={Ponto} title='Pontos de Ônibus'/>
+                    <a href="/Onibus"><img src={Ponto} title='Pontos de Ônibus'/></a>
                     <p>Ponto de Ônibus</p>
                 </div>
                 <div className='Publico'>
-                    <img src={Publico} title='Orgão Publico'/>
+                    <a href="/Publico"><img src={Publico} title='Orgão Publico'/></a>
                     <p>Orgão Publico</p>
                 </div>
                 <div className='P-Historico'>
-                    <img src={Historico} title='Patrimônio Histórico'/>
+                    <a href="/Historico"><img src={Historico} title='Patrimônio Histórico'/></a>
                     <p>Histórico</p>
                 </div>
                 <div className='Alimentacao'>
-                    <img src={AlimentacaoImg} title='Alimentação'/>
+                    <a href="/Alimentacao"><img src={AlimentacaoImg} title='Alimentação'/></a>
                     <p>Alimentação</p>
                 </div>
             </div>
@@ -94,7 +95,11 @@ function Home() {
             <img src={imgMain} alt="Liberdade" id='liberdade' />
             <div className="MenuCentral">
                 <div className="Informacoes">
-                    <AlimentacaoPage />
+                    <Routes>
+                        <Route>
+                            <Route path="/" element={<AlimentacaoPage />} />
+                        </Route>
+                    </Routes>
                 </div>
             </div>
         </main>
