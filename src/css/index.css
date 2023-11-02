@@ -174,7 +174,7 @@ main {
   justify-content: center;
 	/* Realizar a subtração de 100% da altura vertical menos a soma    */
 	/* da altura dos elementos ( 400px ) com as suas margens ( 36px ). */
-	height: calc(100vh - 180px);
+	height: calc(100vh - 170px);
 	flex: 20 1 500px;
 }
 
@@ -257,7 +257,7 @@ aside p {
 }
 
 footer {
-	height: 80px;
+	height: 70px;
 	flex: 1 1 100vw;
   background: #1A3D81;
 } 
@@ -399,12 +399,12 @@ display: none;
 }
 
 .search-input {
-  width: 120px; /* Largura da barra de pesquisa */
+  width: 170px; /* Largura da barra de pesquisa */
   height: 30px;
   margin-top: 34px;
   padding: 5px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 15px;
   outline: none;
   margin-left: 30px;
 }

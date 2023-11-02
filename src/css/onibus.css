@@ -1,0 +1,22 @@
+.Principal {
+    height: 95%;
+    max-height: 98%;
+    margin-left: 0;
+    padding: 6px;
+    margin-top: 10px;
+}
+.BoxProximas {
+    display: flex;
+    background: rgba(255, 255, 255, 0.692);
+    height: 100px;
+    border-radius: 15px;
+}
+
+.BoxSugestoes {
+    overflow-y: auto;
+    display: flex;
+    background: rgba(255, 255, 255, 0.692);
+    height: 320px;
+    border-radius: 15px;
+    max-height: 250px;
+}

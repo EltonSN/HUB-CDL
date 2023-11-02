@@ -1,18 +1,15 @@
-import {Routes, Route } from "react-router-dom";
-import AlimentacaoPage from "./Alimentacao";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
+import { Outlet } from "react-router-dom";
+
+import { NavigationBar } from "../components/NavigationBar";
+import Logo from "../img/cdl.png";
+import Insta from "../img/instagram.png";
+import Linkedin from "../img/linkedin.png";
+import Lupa from "../img/lupa.png";
+import Site from "../img/site.png";
+import Una from "../img/una.png";
+import Youtube from "../img/youtube.png";
 import Menu from './Menu';
-import Publico from "../img/publico.png"
-import Logo from "../img/cdl.png"
-import Historico from "../img/Historico.png"
-import Ponto from "../img/ponto.png"
-import AlimentacaoImg from "../img/Alimentacao.png"
-import Una from "../img/una.png"
-import Site from "../img/site.png"
-import Insta from "../img/instagram.png"
-import Linkedin from "../img/linkedin.png"
-import Youtube from "../img/youtube.png"
-import Lupa from "../img/lupa.png"
 
 
 function Home() {
@@ -58,8 +55,8 @@ function Home() {
             
             <img src={Logo} id="logo" alt="Logo" />
             <div className="Pesquisa2">
-                <input type="text" class="search-input" placeholder="Pesquisar..." />
-                <button class="search-button" type="submit"><img src={Lupa} alt="Pesquisar" /></button>
+                <input type="text" className="search-input" placeholder="Pesquisar..." />
+                <button className="search-button" type="submit"><img src={Lupa} alt="Pesquisar" /></button>
             </div>
             <button id="openMenu">&#9776;</button>
             <nav id="menu">
@@ -70,37 +67,12 @@ function Home() {
             </nav>
         </header>
 
-        <aside>
-            
-            <div className='iconFuncoes'>
-                <div className='Pontos'>
-                    <a href="/Onibus"><img src={Ponto} title='Pontos de Ônibus'/></a>
-                    <p>Ponto de Ônibus</p>
-                </div>
-                <div className='Publico'>
-                    <a href="/Publico"><img src={Publico} title='Orgão Publico'/></a>
-                    <p>Orgão Publico</p>
-                </div>
-                <div className='P-Historico'>
-                    <a href="/Historico"><img src={Historico} title='Patrimônio Histórico'/></a>
-                    <p>Histórico</p>
-                </div>
-                <div className='Alimentacao'>
-                    <a href="/Alimentacao"><img src={AlimentacaoImg} title='Alimentação'/></a>
-                    <p>Alimentação</p>
-                </div>
-            </div>
-        </aside>
+        <NavigationBar />
+
         <main>
             <img src={imgMain} alt="Liberdade" id='liberdade' />
             <div className="MenuCentral">
-                <div className="Informacoes">
-                    <Routes>
-                        <Route>
-                            <Route path="/" element={<AlimentacaoPage />} />
-                        </Route>
-                    </Routes>
-                </div>
+                    <Outlet />
             </div>
         </main>
         <footer>
@@ -108,10 +80,10 @@ function Home() {
                 <img src={Una} />
             </div>
             <div className="Redes">
-                <a href="https://www.cdlbh.com.br" target="_blank"><img src={Site} width="25" alt="Site" /></a>
-                <a href="https://www.instagram.com/cdlbh/" target="_blank" ><img src={Insta} width="20" alt="Instagram" /></a>
-                <a href="https://www.linkedin.com/company/cdlbh/" target="_blank" ><img src={Linkedin} width="20" alt="Linkedin" /></a>
-                <a href="https://www.youtube.com/user/cdlbh" target="_blank" ><img src={Youtube} width="25" alt="YouTube" /></a>
+                <a href="https://www.cdlbh.com.br" target="_blank" rel="noreferrer"><img src={Site} width="25" alt="Site" /></a>
+                <a href="https://www.instagram.com/cdlbh/" target="_blank" rel="noreferrer" ><img src={Insta} width="20" alt="Instagram" /></a>
+                <a href="https://www.linkedin.com/company/cdlbh/" target="_blank" rel="noreferrer" ><img src={Linkedin} width="20" alt="Linkedin" /></a>
+                <a href="https://www.youtube.com/user/cdlbh" target="_blank" rel="noreferrer" ><img src={Youtube} width="25" alt="YouTube" /></a>
             </div>
         </footer>
     </div>

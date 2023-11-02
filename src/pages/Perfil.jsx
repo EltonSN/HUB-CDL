@@ -1,9 +1,8 @@
-import Home from "./Home";
 
 function Perfil() {
     return (
         <div>        
-            <Home />
+            <h1>PERFIL</h1>
         </div>
     )
 }

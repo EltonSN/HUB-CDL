@@ -1,23 +1,26 @@
-import Home from "../img/home.svg"
-import Perfil from "../img/perfil.svg"
+import { Link } from "react-router-dom"
 import Comentario from "../img/comentario.svg"
 import Config from "../img/config.svg"
-import Sobre from "../img/sobre.svg"
+import Home from "../img/home.svg"
 import Lupa from "../img/lupa.png"
+import Perfil from "../img/perfil.svg"
+import Sobre from "../img/sobre.svg"
 
 function Menu() {
     return (
         <div>
             <div className="Menu">
-                <a href="/"><img src={Home} />Home</a>
-                <a href="/perfil"><img src={Perfil} />Perfil</a>
-                <a href="/comentarios"><img src={Comentario} />Comentários</a>
-                <a href="/configuracao"><img src={Config} />Configuração</a>
-                <a href="#"><img src={Sobre} />Sobre</a>
+                <Link to="/"><img src={Home} />Home</Link>
+                <Link to="/perfil"><img src={Perfil} />Perfil</Link>
+                <Link to="/comentarios"><img src={Comentario} />Comentários</Link>
+                <Link to="/configuracao"><img src={Config} />Configuração</Link>
+                <Link to="/sobre"><img src={Sobre} />Sobre</Link>
             </div>
             <div className="Pesquisa">
-            <input type="text" class="search-input" placeholder="Pesquisar..." />
-                <button class="search-button" type="submit"><img src={Lupa} alt="Pesquisar" /></button>
+            <input type="text" className="search-input" placeholder="Pesquisar..." />
+                <button className="search-button" type="submit">
+                    <img src={Lupa} alt="Pesquisar" />
+                </button>
             </div>
         </div>
     )
