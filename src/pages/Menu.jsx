@@ -13,7 +13,7 @@ function Menu() {
                 <Link to="/"><img src={Home} />Home</Link>
                 <Link to="/perfil"><img src={Perfil} />Perfil</Link>
                 <Link to="/comentarios"><img src={Comentario} />Comentários</Link>
-                <Link to="/configuracao"><img src={Config} />Configuração</Link>
+                <Link to="/config"><img src={Config} />Configuração</Link>
                 <Link to="/sobre"><img src={Sobre} />Sobre</Link>
             </div>
             <div className="Pesquisa">
