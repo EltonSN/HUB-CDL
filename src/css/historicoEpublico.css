@@ -1,0 +1,92 @@
+.Principal_H {
+    overflow-y: auto;
+    height: 95%;
+    max-height: 98%;
+    margin-left: 0;
+    padding: 6px;
+    margin-top: 10px;
+}
+
+#Historic {
+    position: fixed;
+    top: -50px;
+    left: 115px;
+    color: rgb(224, 241, 255);
+}
+
+#Public {
+    position: fixed;
+    top: -50px;
+    left: 80px;
+    color: rgb(224, 241, 255);
+}
+
+.Publico:hover {
+    background: #2dc653;
+}
+
+.P-Historico:hover {
+    background: #2dc653;
+}
+
+.H_01 {
+    background: #fff;
+    display: flex;
+    max-width: 95%;
+    margin-left: 10px;
+    margin-top: 15px;
+    height: 30%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    flex-direction: column;
+}
+
+.foto {
+    display: flex;
+    width: 35vw; /* Use uma unidade relativa, como vw (viewport width) */
+    background: #2dc653;
+}
+
+#Img_T {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.informacoes {
+    display: flex;
+    max-width: 60%;
+    padding-left: 5px;
+    border-bottom-right-radius: 30px ;
+}
+
+#Titulo {
+    padding-top: 2px;
+    font-size: 1.9vh;
+    text-align: center;
+    max-width: 160px;
+}
+
+#Descricao {
+    display: flex;
+    overflow-y: auto;
+    max-height: 83px;
+    max-width: 175px;
+    padding-left: 2px;
+    padding-top: 5px;
+    flex-direction: column;
+}
+
+#Descricao::-webkit-scrollbar {
+    width: 5px; /* Largura da barra de rolagem */
+}
+
+#Descricao::-webkit-scrollbar-track {
+    background-color: #146e28; /* Cor de fundo da barra de rolagem */
+}
+
+#Descricao::-webkit-scrollbar-thumb {
+    background-color: #88888800; /* Cor do botão de rolagem */
+}
+

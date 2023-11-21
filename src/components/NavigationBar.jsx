@@ -9,16 +9,16 @@ export function NavigationBar() {
     <aside>
       <div className='iconFuncoes'>
           <div className='Pontos'>
-              <Link to="/bus"><img src={Ponto} title='Pontos de Ônibus'/></Link>
-              <p>Ponto de Ônibus</p>
+              <img src={Ponto} title='Pontos de Ônibus'/>
+              <Link to="/bus"><p>Ponto de Ônibus</p></Link>
           </div>
           <div className='Publico'>
-              <Link to="/public"><img src={Publico} title='Orgão Publico'/></Link>
-              <p>Orgão Publico</p>
+              <img src={Publico} title='Orgão Publico'/>
+              <Link to="/public"><p>Orgão Publico</p></Link>
           </div>
           <div className='P-Historico'>
-              <Link to="/patri"><img src={Historico} title='Patrimônio Histórico'/></Link>
-              <p>Histórico</p>
+              <img src={Historico} title='Patrimônio Histórico'/>
+              <Link to="/patri"><p>Histórico</p></Link>
           </div>
           <div className='Alimentacao'>
               <Link to="/food"><img src={AlimentacaoImg} title='Alimentação'/></Link>

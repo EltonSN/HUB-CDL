@@ -228,6 +228,11 @@ aside .Publico {
   padding: 5px;
   cursor: pointer;
 }
+
+.Publico:active {
+  background: #0eb124;
+}
+
 aside .P-Historico {
   flex-direction: column;
   align-items: center;
@@ -249,6 +254,17 @@ aside .Alimentacao {
   margin: 10px;
   padding: 5px;
   cursor: pointer;
+}
+
+.Alimentacao:hover {
+  background: #2dc653;
+}
+
+#Tit_alimentacao {
+  position: fixed;
+  top: -50px;
+  left: 80px;
+  color: rgb(224, 241, 255);
 }
 
 aside p {
@@ -406,7 +422,6 @@ display: none;
   border: 1px solid #ccc;
   border-radius: 15px;
   outline: none;
-  margin-left: 30px;
 }
 
 .search-button img {

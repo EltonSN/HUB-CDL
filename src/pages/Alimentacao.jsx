@@ -4,6 +4,7 @@ import Localizacao from "../img/localizacao.png"
 function Alimentacao() {
     return (
         <div className="Informacoes">      
+        <h1 id="Tit_alimentacao">Alimentação</h1>
             <table>
                 <tr>
                     <th className="Estabelecimento" colSpan="2">Restaurante Italiano Maurizio Gallo</th>
