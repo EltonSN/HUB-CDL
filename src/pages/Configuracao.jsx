@@ -1,7 +1,8 @@
 function Config() {
     return (
         <div>        
-            <h1>Configuracao</h1>
+            <h3>Configuracao</h3>
+            <h1>Em Desenvolvimento</h1>
         </div>
     )
 }
