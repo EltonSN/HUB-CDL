@@ -208,7 +208,6 @@ aside img:hover {
 
 aside .Pontos {
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   background: #e0fbfc;
   border-radius: 20px;
@@ -263,7 +262,7 @@ aside .Alimentacao {
 #Tit_alimentacao {
   position: fixed;
   top: -50px;
-  left: 80px;
+  left: 60px;
   color: rgb(224, 241, 255);
 }
 
