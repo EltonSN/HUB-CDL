@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './css/index.css'
 import './css/onibus.css'
 import './css/historicoEpublico.css'
+import './css/event.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

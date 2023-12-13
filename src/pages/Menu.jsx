@@ -10,7 +10,7 @@ function Menu() {
     return (
         <div>
             <div className="Menu">
-                <Link to="/"><img src={Home} />Home</Link>
+                <Link to="/event"><img src={Home} />Home</Link>
                 <Link to="/perfil"><img src={Perfil} />Perfil</Link>
                 <Link to="/comentarios"><img src={Comentario} />Comentários</Link>
                 <Link to="/config"><img src={Config} />Configuração</Link>

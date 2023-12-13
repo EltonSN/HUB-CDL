@@ -1,0 +1,39 @@
+#Event {
+    position: fixed;
+    width: 80%;
+    top: -50px;
+    left: 45px;
+    color: rgb(224, 241, 255);
+}
+
+.horario,.Data {
+    position: relative;
+    border-radius: 10px;
+    padding: 4px 8px 4px 8px;
+    font-weight: bold;
+    color: aliceblue;
+    background: #63798b94;
+    font-size: 1.8vh;
+}
+.horario2 {
+    color: transparent;
+}
+.Mais {
+    position: relative;
+    left: 20px;
+    border: solid 2px #264b99;
+    padding: 2px 4px 2px 4px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.6vh;
+}
+
+.Endereco {
+    color: #213241;
+    border-bottom: 2px solid #8fabc2;
+}
+
+td {
+
+    padding-bottom: 10px;
+}
